@@ -52,6 +52,8 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154046) do
   end
 
   create_table "users", force: :cascade do |t|
+    t.integer "user_meta_names_id"
+    t.integer "user_platforms_id"
     t.string "hashTag"
     t.string "name"
     t.integer "userId"
@@ -59,9 +61,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154046) do
     t.datetime "updated_at", null: false
     t.index ["hashTag"], name: "index_users_on_hashTag", unique: true
     t.index ["userId"], name: "index_users_on_userId", unique: true
+    t.index ["user_meta_names_id"], name: "index_users_on_user_meta_names_id"
+    t.index ["user_platforms_id"], name: "index_users_on_user_platforms_id"
   end
 
   add_foreign_key "user_meta_names", "users"
   add_foreign_key "user_platforms", "platforms"
   add_foreign_key "user_platforms", "users"
+  add_foreign_key "users", "user_meta_names", column: "user_meta_names_id"
+  add_foreign_key "users", "user_platforms", column: "user_platforms_id"
 end
