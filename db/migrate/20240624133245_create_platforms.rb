@@ -1,10 +1,10 @@
 class CreatePlatforms < ActiveRecord::Migration[7.1]
   def change
     create_table :platforms do |t|
-      t.integer :number, null: false
-      t.string :name, null: false
-      t.string :icon, null: false
-      t.string :brandColor, null: false
+      t.integer :number
+      t.string :name
+      t.string :icon
+      t.string :brandColor
 
       t.timestamps
     end

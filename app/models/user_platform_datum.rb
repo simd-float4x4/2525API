@@ -1,2 +1,0 @@
-class UserPlatformDatum < ApplicationRecord
-end

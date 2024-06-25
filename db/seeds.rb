@@ -22,8 +22,14 @@ tiktok = Platform.create(number:  8, name: 'TikTok', icon:'fa-brands fa-tiktok',
 instagram = Platform.create(number: 7, name: 'Instagram', icon:'fa-brands fa-instagram', brandColor:'#cf2e92')
 other = Platform.create(number:  999, name: 'その他', icon:'fa-solid fa-ellipsis-vertical', brandColor:'#6f4b3e')
 
+user1 = User.create(hashTag: '#5105', name: 'かつき（ににまる）', userId: 1)
+user2 = User.create(hashTag: '#4965', name: 'ウェイパー高橋', userId: 2)
+user3 = User.create(hashTag: '#8568', name: 'しんせいねう', userId: 3)
+user4 = User.create(hashTag: '#3820', name: 'おっちち姫', userId: 4)
+user5 = User.create(hashTag: '#8464', name: 'たっちゃん', userId: 5)
+user6 = User.create(hashTag: '#7090', name: 'イノシシ', userId: 6)
+user7 = User.create(hashTag: '#3362', name: 'かしゅちゃん', userId: 7)
 
-user1 = User.create(user_hash_tag: '#5105', user_name: 'かつき（ににまる）')
 
 # ユーザーメタネームの追加
 user1.user_meta_names.create(meta_name: 'かつき')
@@ -54,8 +60,6 @@ user1.user_platforms.create(
 
 
 
-user2 = User.create(user_hash_tag: '#4965', user_name: 'ウェイパー高橋')
-
 # ユーザーメタネームの追加
 user2.user_meta_names.create(meta_name: 'ウェイパー')
 user2.user_meta_names.create(meta_name: '高橋')
@@ -82,15 +86,15 @@ user2.user_platforms.create(
 )
 
 
-user3 = User.create(user_hash_tag: '#8568', user_name: 'しんせいねう')
+
 
 # ユーザーメタネームの追加
 user3.user_meta_names.create(meta_name: 'しんせいねう')
 user3.user_meta_names.create(meta_name: 'ねう')
 
 # ユーザープラットフォームの追加
-user3.user_platforms.create(
-  platform: twitcasting
+user3.user_platforms.create( #NOTNULL Constraiants failed
+  platform: twitcasting,
   has_account: true,
   is_broadcasting: true,
   display_text_content: '@c:fukai_ao',
@@ -110,7 +114,7 @@ user3.user_platforms.create(
 )
 
 
-user4 = User.create(user_hash_tag: '#8568', user_name: 'おっちち姫')
+
 
 # ユーザーメタネームの追加
 user4.user_meta_names.create(meta_name: 'モアちゃん')
@@ -142,7 +146,7 @@ user4.user_platforms.create(
 
 
 
-user5 = User.create(user_hash_tag: '#8464', user_name: 'たっちゃん')
+
 
 # ユーザーメタネームの追加
 user5.user_meta_names.create(meta_name: 'おじ雑')
@@ -160,7 +164,6 @@ user5.user_platforms.create(
 )
 
 
-user6 = User.create(user_hash_tag: '#7090', user_name: 'イノシシ')
 
 # ユーザーメタネームの追加
 user6.user_meta_names.create(meta_name: 'イノシシ')
@@ -181,7 +184,6 @@ user6.user_platforms.create(
 )
 
 
-user7 = User.create(user_hash_tag: '#3362', user_name: 'かしゅちゃん')
 
 # ユーザーメタネームの追加
 user7.user_meta_names.create(meta_name: 'かしゅちゃん')
@@ -199,7 +201,7 @@ user7.user_platforms.create(
 )
 
 user7.user_platforms.create(
-  platform: twitcasting.
+  platform: twitcasting,
   has_account: true,
   is_broadcasting: true,
   display_text_content: '@kashu_v0916',
