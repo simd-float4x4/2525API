@@ -1,0 +1,2 @@
+class UserMetaName < ApplicationRecord
+end

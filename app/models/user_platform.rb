@@ -1,0 +1,2 @@
+class UserPlatform < ApplicationRecord
+end
