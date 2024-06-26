@@ -22,6 +22,8 @@ tiktok = Platform.create(number:  8, name: 'TikTok', icon:'fa-brands fa-tiktok',
 instagram = Platform.create(number: 7, name: 'Instagram', icon:'fa-brands fa-instagram', brandColor:'#cf2e92')
 other = Platform.create(number:  999, name: 'その他', icon:'fa-solid fa-ellipsis-vertical', brandColor:'#6f4b3e')
 
+user1MetaName = user_meta_names.create(meta_name: 'まんちょ')
+
 user1 = User.create(hashTag: '#5105', name: 'かつき（ににまる）', userId: 1)
 user2 = User.create(hashTag: '#4965', name: 'ウェイパー高橋', userId: 2)
 user3 = User.create(hashTag: '#8568', name: 'しんせいねう', userId: 3)
