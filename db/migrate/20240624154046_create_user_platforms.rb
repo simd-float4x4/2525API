@@ -4,6 +4,7 @@ class CreateUserPlatforms < ActiveRecord::Migration[7.1]
       t.integer :userId, null: false
       t.integer :itemId
       t.integer :platformId, null: false
+      t.string :platformName, null: false
       t.string :accountUserId
       t.string :accountUserName
       t.string :accountIconImageUrl

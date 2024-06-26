@@ -41,6 +41,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
     t.integer "userId", null: false
     t.integer "itemId"
     t.integer "platformId", null: false
+    t.string "platformName", null: false
     t.string "accountUserId"
     t.string "accountUserName"
     t.string "accountIconImageUrl"

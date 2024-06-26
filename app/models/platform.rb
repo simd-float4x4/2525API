@@ -1,6 +1,7 @@
 class Platform < ApplicationRecord
     self.primary_key = 'platformId'
     belongs_to :user_platform, primary_key: :platformId, foreign_key: :platformId
+    belongs_to :user_platform, primary_key: :platformName, foreign_key: :platformName
 end
 
 

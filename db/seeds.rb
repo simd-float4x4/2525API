@@ -15,6 +15,7 @@ UserPlatform.create(
   userId: 1,
   itemId: 1,
   platformId: 1,
+  platformName: 'Twitch',
   accountUserId: '@220ninimaru',
   accountUserName: '岩崎かつき',
   accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png',

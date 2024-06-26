@@ -8,10 +8,11 @@ class UsersController < ApplicationController
           hashtag: user.hashtag,
           name: user.name,
           metaNames: user.user_meta_names.map(&:userMetaName),
-          platform: user.user_platforms.map { |up| { platformId: up.platformId } }.first,
           userPlatforms: user.user_platforms.map do |up|
             {
               itemId: up.itemId,
+              platformId: up.platformId,
+              platformName: up.platformName,
               accountUserId: up.accountUserId,
               accountUserName: up.accountUserName,
               accountIconImageUrl: up.accountIconImageUrl,
