@@ -24,6 +24,19 @@ UserPlatform.create(
   isBroadCasting: false,
 )
 
+UserPlatform.create(
+  userId: 1,
+  itemId: 1,
+  platformId: 6,
+  platformName: 'Twitter',
+  accountUserId: '@220ninimaru',
+  accountUserName: '岩崎かつき',
+  accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png',
+  accountUserUrl: 'https://www.twitch.tv/220ninimaru',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+
 # all = Platform.create(number: 997, name: 'All', icon:'', brandColor:'#BAA898')
 # nowstreaming = Platform.create(number: 998, name: '配信中', icon:'fa-solid fa-video', brandColor:'red')
 Platform.create(platformId: 1, platformName: 'Twitch', icon:'fa-brands fa-twitch', imageURL: '', brandColor:'#6441a5')
