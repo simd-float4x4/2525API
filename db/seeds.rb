@@ -145,8 +145,8 @@ Platform.create(
 
 
 # # ユーザーメタネームの追加
-UserMetaName.create(userId: 2, meta_name: 'ウェイパー')
-UserMetaName.create(userId: 2, meta_name: '高橋')
+UserMetaName.create(userId: 2, userMetaName: 'ウェイパー')
+UserMetaName.create(userId: 2, userMetaName: '高橋')
 
 UserPlatform.create(
   userId: 2,
@@ -178,8 +178,8 @@ UserPlatform.create(
 
 
 # # ユーザーメタネームの追加
-UserMetaName.create(userId: 3, meta_name: 'しんせいねう')
-UserMetaName.create(userId: 3, meta_name: 'ねう')
+UserMetaName.create(userId: 3, userMetaName: 'しんせいねう')
+UserMetaName.create(userId: 3, userMetaName: 'ねう')
 
 
 UserPlatform.create(
@@ -212,11 +212,11 @@ UserPlatform.create(
 
 
 # # ユーザーメタネームの追加
-UserMetaName.create(userId: 4, meta_name: 'モアちゃん')
-UserMetaName.create(userId: 4, meta_name: 'まきちゃん')
-UserMetaName.create(userId: 4, meta_name: '🗿')
-UserMetaName.create(userId: 4, meta_name: 'おっちち')
-UserMetaName.create(userId: 4, meta_name: '姫')
+UserMetaName.create(userId: 4, userMetaName: 'モアちゃん')
+UserMetaName.create(userId: 4, userMetaName: 'まきちゃん')
+UserMetaName.create(userId: 4, userMetaName: '🗿')
+UserMetaName.create(userId: 4, userMetaName: 'おっちち')
+UserMetaName.create(userId: 4, userMetaName: '姫')
 
 
 UserPlatform.create(
@@ -250,8 +250,8 @@ UserPlatform.create(
 
 
 # # ユーザーメタネームの追加
-UserMetaName.create(userId: 5, meta_name: 'おじ雑')
-UserMetaName.create(userId: 5, meta_name: 'たっちゃん')
+UserMetaName.create(userId: 5, userMetaName: 'おじ雑')
+UserMetaName.create(userId: 5, userMetaName: 'たっちゃん')
 
 # # ユーザープラットフォームの追加
 # user5.user_platforms.create(
@@ -282,11 +282,11 @@ UserPlatform.create(
 
 
 # # ユーザーメタネームの追加
-UserMetaName.create(userId: 6, meta_name: 'イノシシ')
-UserMetaName.create(userId: 6, meta_name: 'のうや')
-UserMetaName.create(userId: 6, meta_name: '腐れパープル歯茎')
-UserMetaName.create(userId: 6, meta_name: 'キンタマ')
-UserMetaName.create(userId: 6, meta_name: '金玉')
+UserMetaName.create(userId: 6, userMetaName: 'イノシシ')
+UserMetaName.create(userId: 6, userMetaName: 'のうや')
+UserMetaName.create(userId: 6, userMetaName: '腐れパープル歯茎')
+UserMetaName.create(userId: 6, userMetaName: 'キンタマ')
+UserMetaName.create(userId: 6, userMetaName: '金玉')
 
 
 UserPlatform.create(
@@ -306,8 +306,8 @@ UserPlatform.create(
 
 
 # # ユーザーメタネームの追加
-UserMetaName.create(userId: 7, meta_name: 'かしゅちゃん')
-UserMetaName.create(userId: 7, meta_name: 'かしゅ')
+UserMetaName.create(userId: 7, userMetaName: 'かしゅちゃん')
+UserMetaName.create(userId: 7, userMetaName: 'かしゅ')
 
 UserPlatform.create(
   userId: 7,
