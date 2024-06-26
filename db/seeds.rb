@@ -24,7 +24,7 @@
 
 # user1MetaName = user_meta_names.create(meta_name: 'まんちょ')
 
-user1 = User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）')
+user1 = User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）', userPlatFormId: 1)
 # user2 = User.create(hashTag: '#4965', name: 'ウェイパー高橋', userId: 2)
 # user3 = User.create(hashTag: '#8568', name: 'しんせいねう', userId: 3)
 # user4 = User.create(hashTag: '#3820', name: 'おっちち姫', userId: 4)
@@ -40,15 +40,17 @@ UserMetaName.create(userId: 1, userMetaName: 'まんちょ')
 UserMetaName.create(userId: 1, userMetaName: '岩崎かつき')
 
 # ユーザープラットフォームの追加
-# user1.user_platforms.create(
-#   platform: twitch,
-#   has_account: true,
-#   is_broadcasting: false,
-#   display_text_content: '@220ninimaru',
-#   account_user_name: '岩崎かつき',
-#   account_url: 'https://www.twitch.tv/220ninimaru',
-#   account_icon_image_url: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png'
-# )
+UserPlatform.create(
+  userPlatFormId: 1,
+  itemId: 1,
+  # platform: twitch,
+  accountUserId: '@220ninimaru',
+  accountUserName: '岩崎かつき',
+  accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png',
+  accountUserUrl: 'https://www.twitch.tv/220ninimaru',
+  hasAccount: true,
+  isBroadCasting: false,
+)
 
 # user1.user_platforms.create(
 #   platform: twitter,

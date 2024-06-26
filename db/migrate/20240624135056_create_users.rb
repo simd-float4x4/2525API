@@ -9,5 +9,6 @@ class CreateUsers < ActiveRecord::Migration[7.1]
       t.timestamps
     end
     add_index :users, :userId, unique: true
+    add_index :users, :userPlatFormId, unique: true
   end
 end

@@ -32,8 +32,17 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154046) do
   end
 
   create_table "user_platforms", force: :cascade do |t|
+    t.integer "userPlatFormId", null: false
+    t.integer "itemId"
+    t.string "accountUserId"
+    t.string "accountUserName"
+    t.string "accountIconImageUrl"
+    t.string "accountUserUrl"
+    t.boolean "hasAccount"
+    t.boolean "isBroadCasting"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["userPlatFormId"], name: "index_user_platforms_on_userPlatFormId"
   end
 
   create_table "users", force: :cascade do |t|
@@ -44,7 +53,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154046) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["userId"], name: "index_users_on_userId", unique: true
+    t.index ["userPlatFormId"], name: "index_users_on_userPlatFormId", unique: true
   end
 
   add_foreign_key "user_meta_names", "users", column: "userId", primary_key: "userId"
+  add_foreign_key "user_platforms", "users", column: "userPlatFormId", primary_key: "userPlatFormId"
 end
