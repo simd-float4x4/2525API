@@ -4,11 +4,19 @@ class CreateUsers < ActiveRecord::Migration[7.1]
       t.integer :userId, null: false
       t.string :hashtag
       t.string :name
-      t.integer :userPlatFormId
+      t.integer :userPlatformId, null: false
     
       t.timestamps
     end
     add_index :users, :userId, unique: true
-    add_index :users, :userPlatFormId, unique: true
+    add_index :users, :userPlatformId, unique: true
   end
 end
+
+
+#　親
+#　add_index :親のテーブル名, :親キー, unique: true
+
+#　子
+#　add_foreign_key :子のテーブル名, :親のテーブル名, column: :親キー, primary_key: :親キー
+#　add_index :子のテーブル名, :親キー

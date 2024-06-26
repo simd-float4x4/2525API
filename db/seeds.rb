@@ -8,10 +8,25 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+user1 = User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）', userPlatformId: 1)
+
+# ユーザープラットフォームの追加
+UserPlatform.create(
+  userPlatformId: 1,
+  itemId: 1,
+  platformId: 1,
+  # platform: twitch,
+  accountUserId: '@220ninimaru',
+  accountUserName: '岩崎かつき',
+  accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png',
+  accountUserUrl: 'https://www.twitch.tv/220ninimaru',
+  hasAccount: true,
+  isBroadCasting: false,
+)
 
 # all = Platform.create(number: 997, name: 'All', icon:'', brandColor:'#BAA898')
 # nowstreaming = Platform.create(number: 998, name: '配信中', icon:'fa-solid fa-video', brandColor:'red')
-# twitch = Platform.create(number:  1, name: 'Twitch', icon:'fa-brands fa-twitch', brandColor:'#6441a5')
+Platform.create(platformId: 1, platformName: 'Twitch', icon:'fa-brands fa-twitch', imageURL: '', brandColor:'#6441a5')
 # whowatch = Platform.create(number:  2, name: 'ふわっち', icon:'', brandColor:'#fb5824')
 # twitcasting = Platform.create(number: 3, name: 'ツイキャス', icon:'', brandColor:'#0273ff')
 # youtubelive = Platform.create(number:  4, name: 'YouTubeLive', icon:'fa-brands fa-youtube', brandColor:'#c4302b')
@@ -24,7 +39,6 @@
 
 # user1MetaName = user_meta_names.create(meta_name: 'まんちょ')
 
-user1 = User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）', userPlatFormId: 1)
 # user2 = User.create(hashTag: '#4965', name: 'ウェイパー高橋', userId: 2)
 # user3 = User.create(hashTag: '#8568', name: 'しんせいねう', userId: 3)
 # user4 = User.create(hashTag: '#3820', name: 'おっちち姫', userId: 4)
@@ -39,18 +53,7 @@ UserMetaName.create(userId: 1, userMetaName: 'ににまる')
 UserMetaName.create(userId: 1, userMetaName: 'まんちょ')
 UserMetaName.create(userId: 1, userMetaName: '岩崎かつき')
 
-# ユーザープラットフォームの追加
-UserPlatform.create(
-  userPlatFormId: 1,
-  itemId: 1,
-  # platform: twitch,
-  accountUserId: '@220ninimaru',
-  accountUserName: '岩崎かつき',
-  accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png',
-  accountUserUrl: 'https://www.twitch.tv/220ninimaru',
-  hasAccount: true,
-  isBroadCasting: false,
-)
+
 
 # user1.user_platforms.create(
 #   platform: twitter,

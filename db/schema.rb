@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_06_24_154046) do
+ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
   create_table "banners", force: :cascade do |t|
     t.string "imageURL", null: false
     t.integer "imageBannerCount", null: false
@@ -19,8 +19,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154046) do
   end
 
   create_table "platforms", force: :cascade do |t|
+    t.integer "platformId", null: false
+    t.string "platformName"
+    t.string "icon"
+    t.string "imageURL"
+    t.string "brandColor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["platformId"], name: "index_platforms_on_platformId"
   end
 
   create_table "user_meta_names", force: :cascade do |t|
@@ -32,8 +38,9 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154046) do
   end
 
   create_table "user_platforms", force: :cascade do |t|
-    t.integer "userPlatFormId", null: false
+    t.integer "userPlatformId", null: false
     t.integer "itemId"
+    t.integer "platformId", null: false
     t.string "accountUserId"
     t.string "accountUserName"
     t.string "accountIconImageUrl"
@@ -42,20 +49,22 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154046) do
     t.boolean "isBroadCasting"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["userPlatFormId"], name: "index_user_platforms_on_userPlatFormId"
+    t.index ["platformId"], name: "index_user_platforms_on_platformId", unique: true
+    t.index ["userPlatformId"], name: "index_user_platforms_on_userPlatformId"
   end
 
   create_table "users", force: :cascade do |t|
     t.integer "userId", null: false
     t.string "hashtag"
     t.string "name"
-    t.integer "userPlatFormId"
+    t.integer "userPlatformId", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["userId"], name: "index_users_on_userId", unique: true
-    t.index ["userPlatFormId"], name: "index_users_on_userPlatFormId", unique: true
+    t.index ["userPlatformId"], name: "index_users_on_userPlatformId", unique: true
   end
 
+  add_foreign_key "platforms", "user_platforms", column: "platformId", primary_key: "platformId"
   add_foreign_key "user_meta_names", "users", column: "userId", primary_key: "userId"
-  add_foreign_key "user_platforms", "users", column: "userPlatFormId", primary_key: "userPlatFormId"
+  add_foreign_key "user_platforms", "users", column: "userPlatformId", primary_key: "userPlatformId"
 end
