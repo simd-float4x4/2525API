@@ -38,7 +38,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
   end
 
   create_table "user_platforms", force: :cascade do |t|
-    t.integer "userPlatformId", null: false
+    t.integer "userId", null: false
     t.integer "itemId"
     t.integer "platformId", null: false
     t.string "accountUserId"
@@ -50,21 +50,19 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["platformId"], name: "index_user_platforms_on_platformId", unique: true
-    t.index ["userPlatformId"], name: "index_user_platforms_on_userPlatformId"
+    t.index ["userId"], name: "index_user_platforms_on_userId"
   end
 
   create_table "users", force: :cascade do |t|
     t.integer "userId", null: false
     t.string "hashtag"
     t.string "name"
-    t.integer "userPlatformId", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["userId"], name: "index_users_on_userId", unique: true
-    t.index ["userPlatformId"], name: "index_users_on_userPlatformId", unique: true
   end
 
   add_foreign_key "platforms", "user_platforms", column: "platformId", primary_key: "platformId"
   add_foreign_key "user_meta_names", "users", column: "userId", primary_key: "userId"
-  add_foreign_key "user_platforms", "users", column: "userPlatformId", primary_key: "userPlatformId"
+  add_foreign_key "user_platforms", "users", column: "userId", primary_key: "userId"
 end

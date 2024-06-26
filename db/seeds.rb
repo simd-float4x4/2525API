@@ -8,14 +8,13 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-user1 = User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）', userPlatformId: 1)
+user1 = User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）')
 
 # ユーザープラットフォームの追加
 UserPlatform.create(
-  userPlatformId: 1,
+  userId: 1,
   itemId: 1,
   platformId: 1,
-  # platform: twitch,
   accountUserId: '@220ninimaru',
   accountUserName: '岩崎かつき',
   accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png',
