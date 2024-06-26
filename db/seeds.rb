@@ -10,6 +10,13 @@
 
 User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）')
 User.create(userId: 2, hashtag: '#4965', name: 'ウェイパー高橋')
+User.create(userId: 3, hashtag: '#8568', name: 'しんせいねう', )
+User.create(userId: 4, hashtag: '#3820', name: 'おっちち姫',)
+User.create(userId: 5, hashtag: '#8464', name: 'たっちゃん',)
+User.create(userId: 6, hashtag: '#7090', name: 'イノシシ',)
+User.create(userId: 7, hashtag: '#3362', name: 'かしゅちゃん')
+User.create(userId: 8, hashtag: '#8571', name: 'かなた')
+
 
 # ユーザープラットフォームの追加
 UserPlatform.create(
@@ -38,29 +45,99 @@ UserPlatform.create(
   isBroadCasting: false,
 )
 
-# all = Platform.create(number: 997, name: 'All', icon:'', brandColor:'#BAA898')
-# nowstreaming = Platform.create(number: 998, name: '配信中', icon:'fa-solid fa-video', brandColor:'red')
-Platform.create(platformId: 1, platformName: 'Twitch', icon:'fa-brands fa-twitch', imageURL: '', brandColor:'#6441a5')
-# whowatch = Platform.create(number:  2, name: 'ふわっち', icon:'', brandColor:'#fb5824')
-# twitcasting = Platform.create(number: 3, name: 'ツイキャス', icon:'', brandColor:'#0273ff')
-# youtubelive = Platform.create(number:  4, name: 'YouTubeLive', icon:'fa-brands fa-youtube', brandColor:'#c4302b')
-# openrec = Platform.create(number:  9, name: 'OpenRec', icon:'', brandColor:'#ff4c11')
-# twitter = Platform.create(number:  6, name: 'X', icon:'fa-brands fa-square-x-twitter', brandColor:'#0f1419')
-# lineopenchat = Platform.create(number:  5, name: 'オープンチャット', icon:'fa-brands fa-line', brandColor:'#06c755')
-# tiktok = Platform.create(number:  8, name: 'TikTok', icon:'fa-brands fa-tiktok', brandColor:'#fe2c55')
-# instagram = Platform.create(number: 7, name: 'Instagram', icon:'fa-brands fa-instagram', brandColor:'#cf2e92')
-# other = Platform.create(number:  999, name: 'その他', icon:'fa-solid fa-ellipsis-vertical', brandColor:'#6f4b3e')
 
-# user1MetaName = user_meta_names.create(meta_name: 'まんちょ')
+Platform.create(
+  platformId: 1, 
+  platformName: 'Twitch', 
+  icon:'fa-brands fa-twitch', 
+  imageURL: '', 
+  brandColor:'#6441a5')
 
-# user2 = User.create(hashTag: '#4965', name: 'ウェイパー高橋', userId: 2)
-# user3 = User.create(hashTag: '#8568', name: 'しんせいねう', userId: 3)
-# user4 = User.create(hashTag: '#3820', name: 'おっちち姫', userId: 4)
-# user5 = User.create(hashTag: '#8464', name: 'たっちゃん', userId: 5)
-# user6 = User.create(hashTag: '#7090', name: 'イノシシ', userId: 6)
-# user7 = User.create(hashTag: '#3362', name: 'かしゅちゃん', userId: 7)
+Platform.create(
+  platformId: 2, 
+  platformName: 'ふわっち', 
+  icon:'', 
+  imageURL: '', 
+  brandColor:'#fb5824')
 
+Platform.create(
+  platformId: 3, 
+  platformName: 'ツイキャス', 
+  icon:'', 
+  imageURL: '', 
+  brandColor:'#0273ff')
 
+Platform.create(
+  platformId: 4, 
+  platformName: 'YouTubeLive', 
+  icon:'fa-brands fa-youtube', 
+  imageURL: '', 
+  brandColor:'#C4302B')
+
+Platform.create(
+  platformId: 5, 
+  platformName: 'オープンチャット', 
+  icon:'fa-brands fa-line', 
+  imageURL: '', 
+  brandColor:'#06c755')
+
+Platform.create(
+  platformId: 6, 
+  platformName: 'X', 
+  icon:'fa-brands fa-square-x-twitter', 
+  imageURL: '', 
+  brandColor:'#0f1419')
+
+Platform.create(
+  platformId: 7, 
+  platformName: 'Instagram', 
+  icon:'fa-brands fa-instagram', 
+  imageURL: '', 
+  brandColor:'#cf2e92')
+
+Platform.create(
+  platformId: 7, 
+  platformName: 'Instagram', 
+  icon:'fa-brands fa-instagram', 
+  imageURL: '', 
+  brandColor:'#cf2e92')
+
+Platform.create(
+  platformId: 8, 
+  platformName: 'TikTok', 
+  icon:'fa-brands fa-tiktok', 
+  imageURL: '', 
+  brandColor:'#fe2c55')
+
+Platform.create(
+  platformId: 9, 
+  platformName: 'OpenRec', 
+  icon:'', 
+  imageURL: '', 
+  brandColor:'#ff4c11')  
+
+Platform.create(
+  platformId: 997, 
+  platformName: 'ALL', 
+  icon:'', 
+  imageURL: '', 
+  brandColor:'#BAA898')
+
+Platform.create(
+  platformId: 998, 
+  platformName: '配信中', 
+  icon:'fa-solid fa-video', 
+  imageURL: '', 
+  brandColor:'red')
+
+Platform.create(
+  platformId: 999, 
+  platformName: 'その他', 
+  icon:'fa-solid fa-ellipsis-vertical', 
+  imageURL: '', 
+  brandColor:'#6f4b3e')
+
+  
 # ユーザーメタネームの追加
 UserMetaName.create(userId: 1, userMetaName: 'かつき')
 UserMetaName.create(userId: 1, userMetaName: 'ににまる')
