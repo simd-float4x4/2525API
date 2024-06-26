@@ -8,7 +8,8 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-user1 = User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）')
+User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）')
+User.create(userId: 2, hashtag: '#4965', name: 'ウェイパー高橋')
 
 # ユーザープラットフォームの追加
 UserPlatform.create(
@@ -84,16 +85,19 @@ UserMetaName.create(userId: 1, userMetaName: '岩崎かつき')
 # user2.user_meta_names.create(meta_name: 'ウェイパー')
 # user2.user_meta_names.create(meta_name: '高橋')
 
-# # ユーザープラットフォームの追加
-# user2.user_platforms.create(
-#   platform: twitch,
-#   has_account: true,
-#   is_broadcasting: false,
-#   display_text_content: '@takahashi0426',
-#   account_user_name: 'ウェイパー高橋',
-#   account_url: 'https://m.twitch.tv/takahashi0426',
-#   account_icon_image_url: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png'
-# )
+UserPlatform.create(
+  userId: 2,
+  itemId: 3,
+  platformId: 6,
+  platformName: 'Twitch',
+  accountUserId: '@takahashi0426',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png',
+  accountUserUrl: 'https://m.twitch.tv/takahashi0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+
 
 # user2.user_platforms.create(
 #   platform: twitter,

@@ -14,10 +14,6 @@ class CreateUserPlatforms < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
-    add_index :user_platforms, :platformId, unique: true
-
-    add_foreign_key :user_platforms, :users, column: :userId, primary_key: :userId
-    add_index :user_platforms, :userId
   end
 end
 

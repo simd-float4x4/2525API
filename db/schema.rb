@@ -19,6 +19,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
   end
 
   create_table "platforms", force: :cascade do |t|
+    t.integer "user_platforms_id"
     t.integer "platformId", null: false
     t.string "platformName"
     t.string "icon"
@@ -26,7 +27,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
     t.string "brandColor"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["platformId"], name: "index_platforms_on_platformId"
+    t.index ["user_platforms_id"], name: "index_platforms_on_user_platforms_id"
   end
 
   create_table "user_meta_names", force: :cascade do |t|
@@ -50,8 +51,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
     t.boolean "isBroadCasting"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["platformId"], name: "index_user_platforms_on_platformId", unique: true
-    t.index ["userId"], name: "index_user_platforms_on_userId"
   end
 
   create_table "users", force: :cascade do |t|
@@ -63,7 +62,6 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
     t.index ["userId"], name: "index_users_on_userId", unique: true
   end
 
-  add_foreign_key "platforms", "user_platforms", column: "platformId", primary_key: "platformId"
+  add_foreign_key "platforms", "user_platforms", column: "user_platforms_id"
   add_foreign_key "user_meta_names", "users", column: "userId", primary_key: "userId"
-  add_foreign_key "user_platforms", "users", column: "userId", primary_key: "userId"
 end

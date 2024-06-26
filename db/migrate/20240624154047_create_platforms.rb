@@ -1,6 +1,7 @@
 class CreatePlatforms < ActiveRecord::Migration[7.1]
   def change
     create_table :platforms do |t|
+      t.references :user_platforms, foreign_key: true
       t.integer :platformId, null: false
       t.string :platformName
       t.string :icon
@@ -9,8 +10,6 @@ class CreatePlatforms < ActiveRecord::Migration[7.1]
 
       t.timestamps
     end
-    add_foreign_key :platforms, :user_platforms, column: :platformId, primary_key: :platformId
-    add_index :platforms, :platformId
   end
 end
 
