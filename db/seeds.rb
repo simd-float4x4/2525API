@@ -45,6 +45,11 @@ UserPlatform.create(
   isBroadCasting: false,
 )
 
+# ユーザーメタネームの追加
+UserMetaName.create(userId: 1, userMetaName: 'かつき')
+UserMetaName.create(userId: 1, userMetaName: 'ににまる')
+UserMetaName.create(userId: 1, userMetaName: 'まんちょ')
+UserMetaName.create(userId: 1, userMetaName: '岩崎かつき')
 
 Platform.create(
   platformId: 1, 
@@ -137,30 +142,11 @@ Platform.create(
   imageURL: '', 
   brandColor:'#6f4b3e')
 
-  
-# ユーザーメタネームの追加
-UserMetaName.create(userId: 1, userMetaName: 'かつき')
-UserMetaName.create(userId: 1, userMetaName: 'ににまる')
-UserMetaName.create(userId: 1, userMetaName: 'まんちょ')
-UserMetaName.create(userId: 1, userMetaName: '岩崎かつき')
-
-
-
-# user1.user_platforms.create(
-#   platform: twitter,
-#   has_account: true,
-#   is_broadcasting: false,
-#   display_text_content: '@220niconico',
-#   account_user_name: 'ににまる',
-#   account_url: 'https://twitter.com/220niconico',
-#   account_icon_image_url: 'https://pbs.twimg.com/profile_images/1775390076111093760/qoTbEbIN_400x400.jpg'
-# )
-
 
 
 # # ユーザーメタネームの追加
-# user2.user_meta_names.create(meta_name: 'ウェイパー')
-# user2.user_meta_names.create(meta_name: '高橋')
+UserMetaName.create(userId: 2, meta_name: 'ウェイパー')
+UserMetaName.create(userId: 2, meta_name: '高橋')
 
 UserPlatform.create(
   userId: 2,
@@ -175,83 +161,97 @@ UserPlatform.create(
   isBroadCasting: false,
 )
 
-
-# user2.user_platforms.create(
-#   platform: twitter,
-#   has_account: true,
-#   is_broadcasting: false,
-#   display_text_content: '@tkhs0426',
-#   account_user_name: 'ウェイパー高橋',
-#   account_url: 'https://twitter.com/tkhs0426',
-#   account_icon_image_url: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg'
-# )
-
-
-
-
-# # ユーザーメタネームの追加
-# user3.user_meta_names.create(meta_name: 'しんせいねう')
-# user3.user_meta_names.create(meta_name: 'ねう')
-
-# # ユーザープラットフォームの追加
-# user3.user_platforms.create( #NOTNULL Constraiants failed
-#   platform: twitcasting,
-#   has_account: true,
-#   is_broadcasting: true,
-#   display_text_content: '@c:fukai_ao',
-#   account_user_name: 'しんせいねう',
-#   account_url: 'https://twitcasting.tv/c:fukai_ao',
-#   account_icon_image_url: 'https://imagegw02.twitcasting.tv/image3s/img-twitcasting.s3-us-west-1.amazonaws.com/07/7c/642ed9d445fdf_64.jpg'
-# )
-
-# user3.user_platforms.create(
-#   platform: twitter,
-#   has_account: true,
-#   is_broadcasting: false,
-#   display_text_content: '@sinseinaru',
-#   account_user_name: 'しんせいねう',
-#   account_url: 'https://twitter.com/sinseinaru',
-#   account_icon_image_url: 'https://pbs.twimg.com/profile_images/1722922807666061312/n6erokfP_400x400.jpg'
-# )
-
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'Twitter',
+  accountUserId: '@tkhs042',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+# 1 Twitch 2 ツイキャス　3 ふわっち　6 X
 
 
 
 # # ユーザーメタネームの追加
-# user4.user_meta_names.create(meta_name: 'モアちゃん')
-# user4.user_meta_names.create(meta_name: 'まきちゃん')
-# user4.user_meta_names.create(meta_name: '🗿')
-# user4.user_meta_names.create(meta_name: 'おっちち')
-# user4.user_meta_names.create(meta_name: '姫')
-
-# # ユーザープラットフォームの追加
-# user4.user_platforms.create(
-#   platform: twitcasting,
-#   has_account: true,
-#   is_broadcasting: false,
-#   display_text_content: '@akirametai_hime',
-#   account_user_name: 'おっちち姫',
-#   account_url: 'https://twitcasting.tv/akirametai_hime/',
-#   account_icon_image_url: 'https://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1745297484119977984/agOpao8A_bigger.jpg'
-# )
-
-# user4.user_platforms.create(
-#   platform: twitter,
-#   has_account: true,
-#   is_broadcasting: false,
-#   display_text_content: '@akirametai_hime',
-#   account_user_name: 'おっちち姫',
-#   account_url: 'https://twitter.com/akirametai_hime',
-#   account_icon_image_url: 'https://pbs.twimg.com/profile_images/1745297484119977984/agOpao8A_400x400.jpg'
-# )
+UserMetaName.create(userId: 3, meta_name: 'しんせいねう')
+UserMetaName.create(userId: 3, meta_name: 'ねう')
 
 
+UserPlatform.create(
+  userId: 3,
+  itemId: 5,
+  platformId: 2,
+  platformName: 'ツイキャス',
+  accountUserId: '@c:fukai_ao',
+  accountUserName: 'しんせいねう',
+  accountIconImageUrl: 'https://imagegw02.twitcasting.tv/image3s/img-twitcasting.s3-us-west-1.amazonaws.com/07/7c/642ed9d445fdf_64.jpg',
+  accountUserUrl: 'https://twitcasting.tv/c:fukai_ao',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+# 1 Twitch 2 ツイキャス　3 ふわっち　6 X
+
+UserPlatform.create(
+  userId: 3,
+  itemId: 6,
+  platformId: 6,
+  platformName: 'Twitter',
+  accountUserId: '@sinseinaru',
+  accountUserName: 'しんせいねう',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1722922807666061312/n6erokfP_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/sinseinaru',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+# 1 Twitch 2 ツイキャス　3 ふわっち　6 X
+
+
+# # ユーザーメタネームの追加
+UserMetaName.create(userId: 4, meta_name: 'モアちゃん')
+UserMetaName.create(userId: 4, meta_name: 'まきちゃん')
+UserMetaName.create(userId: 4, meta_name: '🗿')
+UserMetaName.create(userId: 4, meta_name: 'おっちち')
+UserMetaName.create(userId: 4, meta_name: '姫')
+
+
+UserPlatform.create(
+  userId: 4,
+  itemId: 7,
+  platformId: 2,
+  platformName: 'ツイキャス',
+  accountUserId: '@akirametai_hime',
+  accountUserName: 'おっちち姫',
+  accountIconImageUrl: 'https://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1745297484119977984/agOpao8A_bigger.jpg',
+  accountUserUrl: 'https://twitcasting.tv/akirametai_hime/',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+# 1 Twitch 2 ツイキャス　3 ふわっち　6 X
+
+UserPlatform.create(
+  userId: 4,
+  itemId: 8,
+  platformId: 6,
+  platformName: 'Twitter',
+  accountUserId: '@akirametai_hime',
+  accountUserName: 'おっちち姫',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1745297484119977984/agOpao8A_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/akirametai_hime',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+# 1 Twitch 2 ツイキャス　3 ふわっち　6 X
 
 
 
 # # ユーザーメタネームの追加
-# user5.user_meta_names.create(meta_name: 'おじ雑')
-# user5.user_meta_names.create(meta_name: 'たっちゃん')
+UserMetaName.create(userId: 5, meta_name: 'おじ雑')
+UserMetaName.create(userId: 5, meta_name: 'たっちゃん')
 
 # # ユーザープラットフォームの追加
 # user5.user_platforms.create(
@@ -265,48 +265,73 @@ UserPlatform.create(
 # )
 
 
-
-# # ユーザーメタネームの追加
-# user6.user_meta_names.create(meta_name: 'イノシシ')
-# user6.user_meta_names.create(meta_name: 'のうや')
-# user6.user_meta_names.create(meta_name: '腐れパープル歯茎')
-# user6.user_meta_names.create(meta_name: 'キンタマ')
-# user6.user_meta_names.create(meta_name: '金玉')
-
-# # ユーザープラットフォームの追加
-# user6.user_platforms.create(
-#   platform: whowatch,
-#   has_account: true,
-#   is_broadcasting: true,
-#   display_text_content: '@inosisi2525',
-#   account_user_name: 'イノシシ',
-#   account_url: 'https://whowatch.tv/profile/t:inosisi2525',
-#   account_icon_image_url: 'https://img.whowatch.tv/user_files/22272815/profile_icon/1646029166618.jpeg'
-# )
+UserPlatform.create(
+  userId: 5,
+  itemId: 9,
+  platformId: 3,
+  platformName: 'ふわっち',
+  accountUserId: '@tatsuya0519',
+  accountUserName: 'たっちゃん',
+  accountIconImageUrl: 'https://img.whowatch.tv/user_files/56822518/profile_icon/1718556678257.jpeg',
+  accountUserUrl: 'https://whowatch.tv/profile/w:tatsuya0519',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+# 1 Twitch 2 ツイキャス　3 ふわっち　6 X
 
 
 
 # # ユーザーメタネームの追加
-# user7.user_meta_names.create(meta_name: 'かしゅちゃん')
-# user7.user_meta_names.create(meta_name: 'かしゅ')
+UserMetaName.create(userId: 6, meta_name: 'イノシシ')
+UserMetaName.create(userId: 6, meta_name: 'のうや')
+UserMetaName.create(userId: 6, meta_name: '腐れパープル歯茎')
+UserMetaName.create(userId: 6, meta_name: 'キンタマ')
+UserMetaName.create(userId: 6, meta_name: '金玉')
 
-# # ユーザープラットフォームの追加
-# user7.user_platforms.create(
-#   platform: twitter,
-#   has_account: true,
-#   is_broadcasting: false,
-#   display_text_content: '@kashu_v0916',
-#   account_user_name: 'かしゅちゃん',
-#   account_url: 'https://twitter.com/kashu_v0916',
-#   account_icon_image_url: 'https://pbs.twimg.com/profile_images/1790800649426538496/FNlq_i-O_400x400.jpg'
-# )
 
-# user7.user_platforms.create(
-#   platform: twitcasting,
-#   has_account: true,
-#   is_broadcasting: true,
-#   display_text_content: '@kashu_v0916',
-#   account_user_name: 'かしゅちゃん',
-#   account_url: 'https://twitcasting.tv/kashu_v0916/',
-#   account_icon_image_url: 'https://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1790800649426538496/FNlq_i-O_bigger.jpg'
-# )
+UserPlatform.create(
+  userId: 6,
+  itemId: 10,
+  platformId: 3,
+  platformName: 'ふわっち',
+  accountUserId: '@inosisi2525',
+  accountUserName: 'イノシシ',
+  accountIconImageUrl: 'https://img.whowatch.tv/user_files/22272815/profile_icon/1646029166618.jpeg',
+  accountUserUrl: 'https://whowatch.tv/profile/t:inosisi2525',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+# 1 Twitch 2 ツイキャス　3 ふわっち　6 X
+
+
+
+# # ユーザーメタネームの追加
+UserMetaName.create(userId: 7, meta_name: 'かしゅちゃん')
+UserMetaName.create(userId: 7, meta_name: 'かしゅ')
+
+UserPlatform.create(
+  userId: 7,
+  itemId: 11,
+  platformId: 2,
+  platformName: 'ツイキャス',
+  accountUserId: '@kashu_v0916',
+  accountUserName: 'かしゅちゃん',
+  accountIconImageUrl: 'https://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1790800649426538496/FNlq_i-O_bigger.jpg',
+  accountUserUrl: 'https://twitcasting.tv/kashu_v0916/',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+# 1 Twitch 2 ツイキャス　3 ふわっち　6 X
+
+UserPlatform.create(
+  userId: 7,
+  itemId: 12,
+  platformId: 6,
+  platformName: 'X',
+  accountUserId: '@kashu_v0916',
+  accountUserName: 'かしゅちゃん',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1790800649426538496/FNlq_i-O_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/kashu_v0916',
+  hasAccount: true,
+  isBroadCasting: false,
+)
