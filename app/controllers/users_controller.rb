@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-    def index
+    def list
       users = User.includes(:user_meta_names, :user_platforms)
   
       users_with_meta = users.map do |user|
@@ -17,6 +17,7 @@ class UsersController < ApplicationController
               accountUserName: up.accountUserName,
               accountIconImageUrl: up.accountIconImageUrl,
               accountUserUrl: up.accountUserUrl,
+              accountUserSubText: up.accountUserSubText,
               hasAccount: up.hasAccount,
               isBroadCasting: up.isBroadCasting
             }

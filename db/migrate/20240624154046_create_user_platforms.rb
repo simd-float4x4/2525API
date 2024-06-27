@@ -9,6 +9,7 @@ class CreateUserPlatforms < ActiveRecord::Migration[7.1]
       t.string :accountUserName
       t.string :accountIconImageUrl
       t.string :accountUserUrl
+      t.string :accountUserSubText
       t.boolean :hasAccount
       t.boolean :isBroadCasting
 
