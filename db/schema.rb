@@ -47,6 +47,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
     t.string "accountUserName"
     t.string "accountIconImageUrl"
     t.string "accountUserUrl"
+    t.string "accountUserSubText"
     t.boolean "hasAccount"
     t.boolean "isBroadCasting"
     t.datetime "created_at", null: false

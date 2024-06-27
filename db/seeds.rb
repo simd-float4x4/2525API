@@ -14,8 +14,8 @@ User.create(userId: 3, hashtag: '#8568', name: 'しんせいねう', )
 User.create(userId: 4, hashtag: '#3820', name: 'おっちち姫',)
 User.create(userId: 5, hashtag: '#8464', name: 'たっちゃん',)
 User.create(userId: 6, hashtag: '#7090', name: 'イノシシ',)
-User.create(userId: 7, hashtag: '#3362', name: 'かしゅちゃん')
-User.create(userId: 8, hashtag: '#8571', name: 'かなた')
+User.create(userId: 7, hashtag: '#3362', name: 'かしゅ')
+# User.create(userId: 8, hashtag: '#8571', name: 'かなた')
 
 
 # ユーザープラットフォームの追加
@@ -35,9 +35,9 @@ UserPlatform.create(
 
 UserPlatform.create(
   userId: 1,
-  itemId: 1,
+  itemId: 2,
   platformId: 6,
-  platformName: 'Twitter',
+  platformName: 'X',
   accountUserSubText: '@220ninimaru',
   accountUserId: '',
   accountUserName: '岩崎かつき',
@@ -168,7 +168,7 @@ UserPlatform.create(
   userId: 2,
   itemId: 4,
   platformId: 6,
-  platformName: 'Twitter',
+  platformName: 'X',
   accountUserSubText: '@tkhs042',
   accountUserId: '',
   accountUserName: 'ウェイパー高橋',
@@ -205,7 +205,7 @@ UserPlatform.create(
   userId: 3,
   itemId: 6,
   platformId: 6,
-  platformName: 'Twitter',
+  platformName: 'X',
   accountUserSubText: '@sinseinaru',
   accountUserId: '',
   accountUserName: 'しんせいねう',
@@ -244,7 +244,7 @@ UserPlatform.create(
   userId: 4,
   itemId: 8,
   platformId: 6,
-  platformName: 'Twitter',
+  platformName: 'X',
   accountUserSubText: '@akirametai_hime',
   accountUserId: '',
   accountUserName: 'おっちち姫',
