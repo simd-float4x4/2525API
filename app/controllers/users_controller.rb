@@ -1,8 +1,10 @@
 class UsersController < ApplicationController
     def list
       users = User.includes(:user_meta_names, :user_platforms)
+
+      shuffled_users =  users.shuffle
   
-      users_with_meta = users.map do |user|
+      users_with_meta = shuffled_users .map do |user|
         {
           userId: user.userId,
           hashtag: user.hashtag,
