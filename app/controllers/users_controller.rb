@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
       shuffled_users =  users.shuffle
   
-      users_with_meta = shuffled_users .map do |user|
+      users_with_meta = shuffled_users.map do |user|
         {
           userId: user.userId,
           hashtag: user.hashtag,
