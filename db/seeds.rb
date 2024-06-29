@@ -52,6 +52,7 @@ UserMetaName.create(userId: 1, userMetaName: 'かつき')
 UserMetaName.create(userId: 1, userMetaName: 'ににまる')
 UserMetaName.create(userId: 1, userMetaName: 'まんちょ')
 UserMetaName.create(userId: 1, userMetaName: '岩崎かつき')
+UserMetaName.create(userId: 1, userMetaName: 'いわさき')
 
 Platform.create(
   platformId: 1, 
@@ -178,6 +179,331 @@ UserPlatform.create(
   isBroadCasting: false,
 )
 # 1 Twitch 2 ツイキャス　3 ふわっち　6 X
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
+UserPlatform.create(
+  userId: 2,
+  itemId: 4,
+  platformId: 6,
+  platformName: 'X',
+  accountUserSubText: '@tkhs042',
+  accountUserId: '',
+  accountUserName: 'ウェイパー高橋',
+  accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
+  accountUserUrl: 'https://twitter.com/tkhs0426',
+  hasAccount: true,
+  isBroadCasting: false,
+)
 
 
 
@@ -296,6 +622,8 @@ UserMetaName.create(userId: 6, userMetaName: 'のうや')
 UserMetaName.create(userId: 6, userMetaName: '腐れパープル歯茎')
 UserMetaName.create(userId: 6, userMetaName: 'キンタマ')
 UserMetaName.create(userId: 6, userMetaName: '金玉')
+UserMetaName.create(userId: 6, userMetaName: 'いのしし')
+
 
 
 UserPlatform.create(
