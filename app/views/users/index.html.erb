@@ -1,26 +1,12 @@
-<h1>Users</h1>
-<div class: "btn btn-outline-success">
-新規投稿
-</div>
 
-<h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
-
-<ul>
-  <% @users.each do |u| %>
-    <li>
-      <%= u.name %>
-    </li>
-  <% end %>
-</ul>
-
-<table>
-      <th>
+<table class="table table-dark table-striped-columns table-hover  table-sm">
+<th class="table-secondary">
       <tr>
         <td>
           ID
         </td>
         <td>
-          ハッシュタグ
+          #
         </td>
         <td>
           名前
@@ -55,7 +41,7 @@
       <% u.user_platforms.each do |us| %>
         <tr>
           <td>
-            <%= u.userId %>
+            <%= us.itemId %>
           </td>
           <td>
             <%= u.hashtag %>
@@ -79,33 +65,20 @@
             <%= us.accountUserUrl %>
           </td>
           <td>
-            <%= us.isBroadCasting %>
+            <% if us.isBroadCasting == true %>
+              <button type="button" class="btn btn-outline-danger">配信中</button>
+            <% end %>
           </td>
           <td>
-            <%= us.hasAccount %>
+            <% if us.hasAccount == false %>
+            　<button type="button" class="btn btn-outline-info">凍結済</button>
+            <% end %>
           </td>
           <td>
-            更新
-
-            削除
+            <button type="button" class="btn btn-primary">更新</button>
+            <button type="button" class="btn btn-warning">削除</button>
           </td>
         </tr>
       <% end %>
     <% end %>
 </table>
-
-<h1>Hello#index</h1>
-<p>Find me in app/views/hello/index.html.erb</p>
-<!-- Example single danger button -->
-<div class="btn-group">
-  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    Action
-  </button>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-</div>
