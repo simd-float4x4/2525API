@@ -2,6 +2,9 @@
 <div class: "btn btn-outline-success">
 新規投稿
 </div>
+
+<h5 class="my-0 mr-md-auto font-weight-normal">Company name</h5>
+
 <ul>
   <% @users.each do |u| %>
     <li>
@@ -9,3 +12,100 @@
     </li>
   <% end %>
 </ul>
+
+<table>
+      <th>
+      <tr>
+        <td>
+          ID
+        </td>
+        <td>
+          ハッシュタグ
+        </td>
+        <td>
+          名前
+        </td>
+        <td>
+          配信場所
+        </td>
+        <td>
+          アカウントID
+        </td>
+        <td>
+          アカウント名
+        </td>
+        <td>
+          表示用テキスト
+        </td>
+        <td>
+          URL
+        </td>
+        <td>
+          放送中？
+        </td>
+        <td>
+          アカウント状況
+        </td>
+        <td>
+          アクション
+        </td>
+        </tr>
+    </th>
+    <% @users.each do |u| %>
+      <% u.user_platforms.each do |us| %>
+        <tr>
+          <td>
+            <%= u.userId %>
+          </td>
+          <td>
+            <%= u.hashtag %>
+          </td>
+          <td>
+            <%= u.name %>
+          </td>
+          <td>
+            <%= us.platformName %>
+          </td>
+          <td>
+            <%= us.accountUserName %>
+          </td>
+          <td>
+            <%= us.accountUserName %>
+          </td>
+          <td>
+            <%= us.accountUserSubText %>
+          </td>
+          <td>
+            <%= us.accountUserUrl %>
+          </td>
+          <td>
+            <%= us.isBroadCasting %>
+          </td>
+          <td>
+            <%= us.hasAccount %>
+          </td>
+          <td>
+            更新
+
+            削除
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+</table>
+
+<h1>Hello#index</h1>
+<p>Find me in app/views/hello/index.html.erb</p>
+<!-- Example single danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Action
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">Action</a></li>
+    <li><a class="dropdown-item" href="#">Another action</a></li>
+    <li><a class="dropdown-item" href="#">Something else here</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="#">Separated link</a></li>
+  </ul>
+</div>
