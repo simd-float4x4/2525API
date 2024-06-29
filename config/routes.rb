@@ -8,4 +8,11 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get '/list', to: 'users#list'
+
+
+  # ユーザーデータのコントローラ
+  get '/0x2d0r31/v1/index', to: "users#index"
+
+  # 
+
 end

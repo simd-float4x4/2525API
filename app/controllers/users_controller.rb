@@ -30,4 +30,8 @@ class UsersController < ApplicationController
       pretty_json = JSON.pretty_generate(users_with_meta)
       render plain: pretty_json
     end
+
+    def index
+      @users = User.all
+    end
 end
