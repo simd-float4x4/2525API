@@ -40,4 +40,15 @@ class UsersController < ApplicationController
       @user = User.find_by(userId: params[:id])
       render :layout => "layouts/application"
     end
+
+    def suspend
+      @user = User.find_by(userId: params[:userId])
+      @item = @user.user_platforms.find_by(itemId: params[:itemId])
+      @item.hasAccount = false
+      @item.save
+      @user.save
+      @users = User.all
+      
+      redirect_to user_list_path
+    end
 end
