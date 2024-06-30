@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get "/0x2d0r31/v1/user/:id", to: "users#show", as: 'user'
 
   #　凍結
+  get "/0x2d0r31/v1/user/:userId/:itemId/suspend", to: "users#suspend"
   post "/0x2d0r31/v1/user/:userId/:itemId/suspend", to: "users#suspend", as: 'user_suspend'
 
 end
