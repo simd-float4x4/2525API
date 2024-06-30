@@ -11,18 +11,24 @@ class UsersController < ApplicationController
           name: user.name,
           metaNames: user.user_meta_names.map(&:userMetaName),
           userPlatforms: user.user_platforms.map do |up|
-            {
-              itemId: up.itemId,
-              platformId: up.platformId,
-              platformName: up.platformName,
-              accountUserId: up.accountUserId,
-              accountUserName: up.accountUserName,
-              accountIconImageUrl: up.accountIconImageUrl,
-              accountUserUrl: up.accountUserUrl,
-              accountUserSubText: up.accountUserSubText,
-              hasAccount: up.hasAccount,
-              isBroadCasting: up.isBroadCasting
-            }
+            if up.hasAccount == true 
+              {
+                platformId: up.platformId,
+                platformName: up.platformName,
+                accountUserId: up.accountUserId,
+                accountUserName: up.accountUserName,
+                accountIconImageUrl: up.accountIconImageUrl,
+                accountUserUrl: up.accountUserUrl,
+                accountUserSubText: up.accountUserSubText,
+                hasAccount: up.hasAccount,
+                isBroadCasting: up.isBroadCasting
+              }
+            else 
+              {
+                itemId: up.itemId,
+                hasAccount: false
+              }
+            end
           end
         }
       end
@@ -48,7 +54,7 @@ class UsersController < ApplicationController
       @item.save
       @user.save
       @users = User.all
-      
+
       redirect_to user_list_path
     end
 end
