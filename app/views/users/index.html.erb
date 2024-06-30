@@ -1,110 +1,113 @@
-
-<div style="display: flex;">
-  <button type="button" class="btn btn-warning">追加する</button>
-  <div class="mb-9">
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+<div class = "container">
+  <div style="display: flex;">
+    <button type="button" class="btn btn-warning">追加する</button>
+    <div class="mb-9">
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+    <button type="button" class="btn btn-success">検索</button>
   </div>
-  <button type="button" class="btn btn-success">検索</button>
+
+  <div class="table-responsive">
+    <table class="table table-dark table-striped-columns table-hover  table-sm" style="white-space: nowrap;">
+    <th class="table-secondary">
+          <tr>
+            <td>
+              ID
+            </td>
+            <td>
+              #
+            </td>
+            <td>
+              名前
+            </td>
+            <td>
+              配信場所
+            </td>
+            <td>
+              アカウントID
+            </td>
+            <td>
+              アカウント名
+            </td>
+            <td>
+              表示用テキスト
+            </td>
+            <td>
+              URL
+            </td>
+            <td>
+              放送中？
+            </td>
+            <td>
+              アカウント状況
+            </td>
+            <td>
+              アクション
+            </td>
+            </tr>
+        </th>
+        <% @users.each do |u| %>
+          <% u.user_platforms.each do |us| %>
+            <tr>
+              <td>
+                <%= us.itemId %>
+              </td>
+              <td>
+                <%= u.hashtag %>
+              </td>
+              <td>
+                <%= u.name %>
+              </td>
+              <td>
+                <%= us.platformName %>
+              </td>
+              <td>
+                <%= us.accountUserName %>
+              </td>
+              <td>
+                <%= us.accountUserName %>
+              </td>
+              <td>
+                <%= us.accountUserSubText %>
+              </td>
+              <td>
+                <button type="button" class="btn btn-link">
+                  <%= link_to us.accountUserUrl, us.accountUserUrl, target: :_blank, rel: "noopener noreferrer" %>
+                </button>
+              </td>
+              <td>
+                <% if us.isBroadCasting == true %>
+                  <button type="button" class="btn btn-outline-danger">配信中</button>
+                <% end %>
+              </td>
+              <td>
+                <% if us.hasAccount == false %>
+                　<button type="button" class="btn btn-outline-info">凍結済</button>
+                <% end %>
+              </td>
+              <td>
+                <%= link_to "編集", user_path(id: u.userId), class: "btn btn-primary" %>
+                <% if us.hasAccount == true %>
+                  <button type="button" class="btn btn-warning">非公開</button>
+                <% end %>
+              </td>
+            </tr>
+          <% end %>
+        <% end %>
+    </table>
+  </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+      <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+      </li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+      </li>
+    </ul>
+  </nav>
 </div>
-
-<table class="table table-dark table-striped-columns table-hover  table-sm">
-<th class="table-secondary">
-      <tr>
-        <td>
-          ID
-        </td>
-        <td>
-          #
-        </td>
-        <td>
-          名前
-        </td>
-        <td>
-          配信場所
-        </td>
-        <td>
-          アカウントID
-        </td>
-        <td>
-          アカウント名
-        </td>
-        <td>
-          表示用テキスト
-        </td>
-        <td>
-          URL
-        </td>
-        <td>
-          放送中？
-        </td>
-        <td>
-          アカウント状況
-        </td>
-        <td>
-          アクション
-        </td>
-        </tr>
-    </th>
-    <% @users.each do |u| %>
-      <% u.user_platforms.each do |us| %>
-        <tr>
-          <td>
-            <%= us.itemId %>
-          </td>
-          <td>
-            <%= u.hashtag %>
-          </td>
-          <td>
-            <%= u.name %>
-          </td>
-          <td>
-            <%= us.platformName %>
-          </td>
-          <td>
-            <%= us.accountUserName %>
-          </td>
-          <td>
-            <%= us.accountUserName %>
-          </td>
-          <td>
-            <%= us.accountUserSubText %>
-          </td>
-          <td>
-            <button type="button" class="btn btn-link">
-              <%= link_to us.accountUserUrl, us.accountUserUrl, target: :_blank, rel: "noopener noreferrer" %>
-            </button>
-          </td>
-          <td>
-            <% if us.isBroadCasting == true %>
-              <button type="button" class="btn btn-outline-danger">配信中</button>
-            <% end %>
-          </td>
-          <td>
-            <% if us.hasAccount == false %>
-            　<button type="button" class="btn btn-outline-info">凍結済</button>
-            <% end %>
-          </td>
-          <td>
-            <button type="button" class="btn btn-primary">更新</button>
-            <% if us.hasAccount == true %>
-              <button type="button" class="btn btn-danger">削除</button>
-            <% end %>
-          </td>
-        </tr>
-      <% end %>
-    <% end %>
-</table>
-
-<nav aria-label="Page navigation example">
-  <ul class="pagination justify-content-end">
-    <li class="page-item disabled">
-      <a class="page-link">Previous</a>
-    </li>
-    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-    <li class="page-item"><a class="page-link" href="#">2</a></li>
-    <li class="page-item"><a class="page-link" href="#">3</a></li>
-    <li class="page-item">
-      <a class="page-link" href="#">Next</a>
-    </li>
-  </ul>
-</nav>

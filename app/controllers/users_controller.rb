@@ -35,4 +35,9 @@ class UsersController < ApplicationController
       @users = User.all
       render :layout => "layouts/application"
     end
+
+    def show
+      @user = User.find_by(userId: params[:id])
+      render :layout => "layouts/application"
+    end
 end

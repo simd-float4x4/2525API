@@ -1,0 +1,70 @@
+
+<div class="container">
+    <h4>
+        <b><%= @user.name %></b> 
+    </h4>
+    <table class="table table-dark table-striped-columns table-hover  table-sm" style="overflow: scroll;">
+    <th class="table-secondary">
+        <% @user.user_platforms.each do |us| %>
+        <tr>
+            <td>
+            <%= us.itemId %>
+            </td>
+            <td>
+            <%= @user.hashtag %>
+            </td>
+            <td>
+            <%= @user.name %>
+            </td>
+            <td>
+            <%= us.platformName %>
+            </td>
+            <td>
+            <%= us.accountUserName %>
+            </td>
+            <td>
+            <%= us.accountUserName %>
+            </td>
+            <td>
+            <%= us.accountUserSubText %>
+            </td>
+            <td>
+            <button type="button" class="btn btn-link">
+                <%= link_to us.accountUserUrl, us.accountUserUrl, target: :_blank, rel: "noopener noreferrer" %>
+            </button>
+            </td>
+            <td>
+            <% if us.isBroadCasting == true %>
+                <button type="button" class="btn btn-outline-danger">配信中</button>
+            <% end %>
+            </td>
+            <td>
+            <% if us.hasAccount == false %>
+            　<button type="button" class="btn btn-outline-info">凍結済</button>
+            <% end %>
+            </td>
+            <td>
+            <button type="button" class="btn btn-primary">編集</button>
+            <% if us.hasAccount == true %>
+                <button type="button" class="btn btn-warning">非公開</button>
+            <% end %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+
+    <nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-end">
+    <li class="page-item disabled">
+        <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="#">2</a></li>
+    <li class="page-item"><a class="page-link" href="#">3</a></li>
+    <li class="page-item">
+        <a class="page-link" href="#">Next</a>
+    </li>
+    </ul>
+    </nav>
+
+</div>
