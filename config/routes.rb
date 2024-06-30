@@ -20,4 +20,7 @@ Rails.application.routes.draw do
   get "/0x2d0r31/v1/user/:userId/:itemId/suspend", to: "users#suspend"
   post "/0x2d0r31/v1/user/:userId/:itemId/suspend", to: "users#suspend", as: 'user_suspend'
 
+  # 作成
+  get "/xy76Za109b/v1/user/create", to: "users#create", as: 'user_create'
+
 end

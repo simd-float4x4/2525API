@@ -8,14 +8,14 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-User.create(userId: 1, hashtag: '#5105', name: 'かつき（ににまる）')
-User.create(userId: 2, hashtag: '#4965', name: 'ウェイパー高橋')
-User.create(userId: 3, hashtag: '#8568', name: 'しんせいねう', )
-User.create(userId: 4, hashtag: '#3820', name: 'おっちち姫',)
-User.create(userId: 5, hashtag: '#8464', name: 'たっちゃん',)
-User.create(userId: 6, hashtag: '#7090', name: 'イノシシ',)
-User.create(userId: 7, hashtag: '#3362', name: 'かしゅ')
-# User.create(userId: 8, hashtag: '#8571', name: 'かなた')
+User.create(userId: 1, hashtag: '5105', name: 'かつき（ににまる）')
+User.create(userId: 2, hashtag: '4965', name: 'ウェイパー高橋')
+User.create(userId: 3, hashtag: '8568', name: 'しんせいねう', )
+User.create(userId: 4, hashtag: '3820', name: 'おっちち姫',)
+User.create(userId: 5, hashtag: '8464', name: 'たっちゃん',)
+User.create(userId: 6, hashtag: '7090', name: 'イノシシ',)
+User.create(userId: 7, hashtag: '3362', name: 'かしゅ')
+# User.create(userId: 8, hashtag: '8571', name: 'かなた')
 
 
 # ユーザープラットフォームの追加
@@ -24,7 +24,7 @@ UserPlatform.create(
   itemId: 1,
   platformId: 1,
   platformName: 'Twitch',
-  accountUserSubText: '@220ninimaru',
+  accountUserSubText: '220ninimaru',
   accountUserId: '',
   accountUserName: '岩崎かつき',
   accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png',
@@ -38,11 +38,11 @@ UserPlatform.create(
   itemId: 2,
   platformId: 6,
   platformName: 'X',
-  accountUserSubText: '@220ninimaru',
+  accountUserSubText: '220niconico',
   accountUserId: '',
   accountUserName: '岩崎かつき',
   accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/bf505f86-40f1-40aa-bb88-40a9389a612c-profile_image-70x70.png',
-  accountUserUrl: 'https://www.twitch.tv/220ninimaru',
+  accountUserUrl: 'https://twitter.com/220niconico',
   hasAccount: true,
   isBroadCasting: false,
 )
@@ -155,7 +155,7 @@ UserPlatform.create(
   itemId: 3,
   platformId: 1,
   platformName: 'Twitch',
-  accountUserSubText: '@takahashi0426',
+  accountUserSubText: 'takahashi0426',
   accountUserId: '',
   accountUserName: 'ウェイパー高橋',
   accountIconImageUrl: 'https://static-cdn.jtvnw.net/jtv_user_pictures/b6f09453-f56b-47fa-a0c6-b9d690f48c5c-profile_image-70x70.png',
@@ -169,7 +169,7 @@ UserPlatform.create(
   itemId: 4,
   platformId: 6,
   platformName: 'X',
-  accountUserSubText: '@tkhs042',
+  accountUserSubText: 'tkhs042',
   accountUserId: '',
   accountUserName: 'ウェイパー高橋',
   accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1245641376127021057/Jmk1n94w_400x400.jpg',
@@ -191,7 +191,7 @@ UserPlatform.create(
   itemId: 5,
   platformId: 2,
   platformName: 'ツイキャス',
-  accountUserSubText: '@c:fukai_ao',
+  accountUserSubText: 'c:fukai_ao',
   accountUserId: '',
   accountUserName: 'しんせいねう',
   accountIconImageUrl: 'https://imagegw02.twitcasting.tv/image3s/img-twitcasting.s3-us-west-1.amazonaws.com/07/7c/642ed9d445fdf_64.jpg',
@@ -206,7 +206,7 @@ UserPlatform.create(
   itemId: 6,
   platformId: 6,
   platformName: 'X',
-  accountUserSubText: '@sinseinaru',
+  accountUserSubText: 'sinseinaru',
   accountUserId: '',
   accountUserName: 'しんせいねう',
   accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1722922807666061312/n6erokfP_400x400.jpg',
@@ -230,7 +230,7 @@ UserPlatform.create(
   itemId: 7,
   platformId: 2,
   platformName: 'ツイキャス',
-  accountUserSubText: '@akirametai_hime',
+  accountUserSubText: 'akirametai_hime',
   accountUserId: '',
   accountUserName: 'おっちち姫',
   accountIconImageUrl: 'https://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1745297484119977984/agOpao8A_bigger.jpg',
@@ -245,7 +245,7 @@ UserPlatform.create(
   itemId: 8,
   platformId: 6,
   platformName: 'X',
-  accountUserSubText: '@akirametai_hime',
+  accountUserSubText: 'akirametai_hime',
   accountUserId: '',
   accountUserName: 'おっちち姫',
   accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1745297484119977984/agOpao8A_400x400.jpg',
@@ -266,7 +266,7 @@ UserMetaName.create(userId: 5, userMetaName: 'たっちゃん')
 #   platform: twitcasting,
 #   has_account: true,
 #   is_broadcasting: false,
-#   display_text_content: '@tatsuya0519',
+#   display_text_content: 'tatsuya0519',
 #   account_user_name: 'たっちゃん',
 #   account_url: 'https://whowatch.tv/profile/w:tatsuya0519',
 #   account_icon_image_url: 'https://img.whowatch.tv/user_files/56822518/profile_icon/1718556678257.jpeg'
@@ -278,7 +278,7 @@ UserPlatform.create(
   itemId: 9,
   platformId: 3,
   platformName: 'ふわっち',
-  accountUserSubText: '@tatsuya0519',
+  accountUserSubText: 'tatsuya0519',
   accountUserId: '',
   accountUserName: 'たっちゃん',
   accountIconImageUrl: 'https://img.whowatch.tv/user_files/56822518/profile_icon/1718556678257.jpeg',
@@ -303,7 +303,7 @@ UserPlatform.create(
   itemId: 10,
   platformId: 3,
   platformName: 'ふわっち',
-  accountUserSubText: '@inosisi2525',
+  accountUserSubText: 'inosisi2525',
   accountUserId: '',
   accountUserName: 'イノシシ',
   accountIconImageUrl: 'https://img.whowatch.tv/user_files/22272815/profile_icon/1646029166618.jpeg',
@@ -324,7 +324,7 @@ UserPlatform.create(
   itemId: 11,
   platformId: 2,
   platformName: 'ツイキャス',
-  accountUserSubText: '@kashu_v0916',
+  accountUserSubText: 'kashu_v0916',
   accountUserId: '',
   accountUserName: 'かしゅちゃん',
   accountIconImageUrl: 'https://imagegw02.twitcasting.tv/image3s/pbs.twimg.com/profile_images/1790800649426538496/FNlq_i-O_bigger.jpg',
@@ -340,7 +340,7 @@ UserPlatform.create(
   platformId: 6,
   platformName: 'X',
   accountUserId: '',
-  accountUserSubText: '@kashu_v0916',
+  accountUserSubText: 'kashu_v0916',
   accountUserName: 'かしゅちゃん',
   accountIconImageUrl: 'https://pbs.twimg.com/profile_images/1790800649426538496/FNlq_i-O_400x400.jpg',
   accountUserUrl: 'https://twitter.com/kashu_v0916',

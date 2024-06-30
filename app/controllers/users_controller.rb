@@ -7,7 +7,7 @@ class UsersController < ApplicationController
       users_with_meta = shuffled_users.map do |user|
         {
           userId: user.userId,
-          hashtag: user.hashtag,
+          hashtag: '#' + user.hashtag,
           name: user.name,
           metaNames: user.user_meta_names.map(&:userMetaName),
           userPlatforms: user.user_platforms.map do |up|
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
                 accountUserName: up.accountUserName,
                 accountIconImageUrl: up.accountIconImageUrl,
                 accountUserUrl: up.accountUserUrl,
-                accountUserSubText: up.accountUserSubText,
+                accountUserSubText: '@' + up.accountUserSubText,
                 hasAccount: up.hasAccount,
                 isBroadCasting: up.isBroadCasting
               }
@@ -50,11 +50,15 @@ class UsersController < ApplicationController
     def suspend
       @user = User.find_by(userId: params[:userId])
       @item = @user.user_platforms.find_by(itemId: params[:itemId])
-      @item.hasAccount = false
+      @item.hasAccount = @item.hasAccount ? false : true
       @item.save
       @user.save
       @users = User.all
 
       redirect_to user_list_path
+    end
+
+    def create
+      render :layout => "layouts/application"
     end
 end
