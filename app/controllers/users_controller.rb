@@ -59,6 +59,37 @@ class UsersController < ApplicationController
     end
 
     def create
+      @user = User.new
+      @platforms = Platform.all
       render :layout => "layouts/application"
+    end
+
+    def saveCreate
+      @user = User.new(user_params)
+      if @user.save
+        redirect_to user_list_path, notice: 'User was successfully created.'
+      else
+        @platforms = Platform.all
+        render :create
+      end
+    end
+
+    private
+
+    def user_params
+      params.require(:user).permit(
+        :name, :hashtag,
+        user_meta_name_attributes: [:userMetaNames],
+        user_platforms_attributes: [
+          :accountUserId, 
+          :accountUserName, 
+          :accountIconImageUrl, 
+          :accountUserUrl, 
+          :accountUserSubText, 
+          :hasAccount, 
+          :isBroadCasting, 
+          :platform_id
+        ]
+      )
     end
 end

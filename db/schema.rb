@@ -54,8 +54,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "users", force: :cascade do |t|
-    t.integer "userId", null: false
+  create_table "users", primary_key: "userId", force: :cascade do |t|
     t.string "hashtag"
     t.string "name"
     t.datetime "created_at", null: false

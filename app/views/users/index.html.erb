@@ -1,6 +1,6 @@
 <div class = "container">
   <div style="display: flex;">
-    <%= link_to "ユーザー登録する", user_create_path, class: "btn btn-warning" %>
+    <%= link_to "ユーザー登録する", move_user_create_path, class: "btn btn-warning" %>
     <div class="mb-9">
       <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
     </div>
@@ -86,7 +86,7 @@
                 <% end %>
               </td>
               <td>
-                <%= link_to "編集", user_path(id: u.userId), class: "btn btn-primary" %>
+                <%= link_to "編集", user_show_path(id: u.userId), class: "btn btn-primary" %>
                 <% if us.hasAccount == true %>
                   <%= link_to "非公開", user_suspend_path(userId: u.userId, itemId: us.itemId), method: :post, class: "btn btn-warning" %>
                 <% elsif us.hasAccount == false %>
