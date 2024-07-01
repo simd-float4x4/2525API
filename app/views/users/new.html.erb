@@ -42,6 +42,13 @@
             <tbody>
             <%= f.fields_for :user_platforms do |platform_form| %>
                 <tr>
+                    <td scope="row" style="width: 30%">アイテムID(編集不可)</td>
+                    <td>
+                        8
+                        <%= f.hidden_field :userId, :value => '9' %>
+                    </td>
+                </tr>
+                <tr>
                     <td scope="row" style="width: 30%">プラットフォーム</td>
                     <td>
                         <div class="dropdown">
