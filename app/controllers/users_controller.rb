@@ -13,6 +13,7 @@ class UsersController < ApplicationController
           userPlatforms: user.user_platforms.map do |up|
             if up.hasAccount == true 
               {
+                itemId: up.itemId,
                 platformId: up.platformId,
                 platformName: up.platformName,
                 accountUserId: up.accountUserId,
@@ -58,19 +59,21 @@ class UsersController < ApplicationController
       redirect_to user_list_path
     end
 
-    def create
+    def new
       @user = User.new
+      @user.user_meta_names.build
+      @user.user_platforms.build
       @platforms = Platform.all
       render :layout => "layouts/application"
     end
 
-    def saveCreate
+    def create
       @user = User.new(user_params)
-      if @user.save
-        redirect_to user_list_path, notice: 'User was successfully created.'
+      if @user.save!
+        redirect_to user_list_path
       else
         @platforms = Platform.all
-        render :create
+        render :new
       end
     end
 
@@ -81,6 +84,8 @@ class UsersController < ApplicationController
         :name, :hashtag,
         user_meta_name_attributes: [:userMetaNames],
         user_platforms_attributes: [
+          :id,
+          :itemId,
           :accountUserId, 
           :accountUserName, 
           :accountIconImageUrl, 
@@ -88,7 +93,8 @@ class UsersController < ApplicationController
           :accountUserSubText, 
           :hasAccount, 
           :isBroadCasting, 
-          :platform_id
+          :platformId,
+          :platformName
         ]
       )
     end

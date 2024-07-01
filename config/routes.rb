@@ -22,7 +22,7 @@ Rails.application.routes.draw do
 
   # 作成
   # indexからgetで取得する
-  get "/xy76Za109b/v1/user/create", to: "users#create", as: 'move_user_create'
-  post "/xy76Za109b/v1/user/create", to: "users#saveCreate", as: 'post_user_create'
+  get "/xy76Za109b/v1/user/create", to: "users#new", as: 'move_user_create'
+  post "/xy76Za109b/v1/user/create", to: "users#create", as: 'post_user_create'
 
 end

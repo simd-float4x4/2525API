@@ -1,5 +1,5 @@
 class UserPlatform < ApplicationRecord
-    belongs_to :user, primary_key: :userId, foreign_key: 'userId'
+    belongs_to :user, primary_key: :userId, foreign_key: 'userId', optional: true
     has_many :platforms, primary_key: :platformId, foreign_key: 'platformId'
     has_many :platforms, primary_key: :platformName, foreign_key: 'platformName'
 end
