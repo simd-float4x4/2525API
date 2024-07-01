@@ -69,11 +69,11 @@ class UsersController < ApplicationController
 
     def create
       @user = User.new(user_params)
-      if @user.save!
+      if @user.save
         redirect_to user_list_path
       else
         @platforms = Platform.all
-        render :new
+        render :new, layout: "layouts/application"
       end
     end
 

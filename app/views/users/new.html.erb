@@ -1,8 +1,18 @@
-<%= form_with model: @user, url: post_user_create_path, local: true do |f| %>
+<%= form_with model: @user, local: true do |f| %>
     <div class="container">
         <h4 class="mt-5 mb-5">
             <b>ユーザー新規作成</b> 
         </h4>
+        <% if @user.errors.any? %>
+            <div id="error_explanation" class="alert alert-danger">
+            <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+            <ul>
+                <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+                <% end %>
+            </ul>
+            </div>
+        <% end %>
         <table class="table">
             <tbody>
                 <tr>
@@ -28,7 +38,7 @@
                     <td scope="row" style="width: 30%">メタタグ</td>
                     <td>
                         <%= f.fields_for :user_meta_names do |meta_form| %>
-                            <%= meta_form.text_field :userMetaName %>
+                            <%= meta_form.text_field :userMetaName, class: "form-control" %>
                         <% end %>
                     </td>
                 </tr>
@@ -108,7 +118,7 @@
     <% end %>
 </div>
 
-<div class="container mt-5">
+<div class="container mt-5 mb-5">
 <div class="d-grid gap-2">
     <%= f.submit "この内容で登録する", class: "btn btn-success" %>
     <button class="btn btn-primary" type="button">入力作業を続ける</button>
