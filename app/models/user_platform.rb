@@ -1,4 +1,7 @@
 class UserPlatform < ApplicationRecord
+    validates :accountUserUrl, format: /\A#{URI::regexp(%w(http https))}\z/
+    validates :accountIconImageUrl, format: /\A#{URI::regexp(%w(http https))}\z/
+
     belongs_to :user, primary_key: :userId, foreign_key: 'userId', optional: true
     has_many :platforms, primary_key: :platformId, foreign_key: 'platformId'
     has_many :platforms, primary_key: :platformName, foreign_key: 'platformName'

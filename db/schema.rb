@@ -59,6 +59,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_06_24_154047) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["hashtag"], name: "index_users_on_hashtag", unique: true
     t.index ["userId"], name: "index_users_on_userId", unique: true
   end
 
